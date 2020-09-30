@@ -24,7 +24,6 @@ const auth = firebase.auth();
 const firestore = firebase.firestore();
 // const analytics = firebase.analytics();
 
-
 function App() {
 
   const [user] = useAuthState(auth);
@@ -93,7 +92,8 @@ function ChatRoom() {
     dummy.current.scrollIntoView({ behavior: 'smooth' });
   }
 
-  return (<>
+  return (
+  <>
     <main>
 
       {messages && messages.map(msg => <ChatMessage key={msg.id} message={msg} />)}
